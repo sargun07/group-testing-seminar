@@ -203,26 +203,57 @@ group-testing-seminar/
 
 ---
 
-## Suggested Visuals
+## Visual Overview
 
-You can add screenshots from the presentation here.
+The following figures are adapted from the seminar presentation and illustrate
+the main ideas behind modern non-adaptive group testing.
+
+---
 
 ### Group Testing Intuition
 
-- pooled testing example
-- healthy vs infected pools
-- sparse population visualization
+<p align="center">
+  <img src="figures/population_sparse.heic" width="45%"/>
+  &nbsp;&nbsp;&nbsp;
+  <img src="figures/positive_negative_pool.heic" width="45%"/>
+</p>
 
-### Threshold Phenomena
+The intuition behind group testing is that, in large populations,
+only a very small fraction of individuals are infected.
 
-- information-theoretic threshold plot
-- algorithmic threshold plot
-- algorithmic gap visualization
+Instead of testing everyone individually, samples are pooled together:
 
-### Spatial Coupling
+- **Negative test** → everyone in the pool is healthy
+- **Positive test** → at least one individual in the pool is infected
 
-- coupled pool structure
-- progressive recovery diagram
+When infections are rare, a single pooled test can provide information
+about many individuals simultaneously.
+
+---
+
+### Information-Theoretic & Algorithmic Thresholds
+
+<p align="center">
+  <img src="figures/algorithmic_gap.heic" width="700"/>
+</p>
+
+Comparison of recovery thresholds under:
+- Bernoulli designs
+- Near-constant column weight designs
+- Counting bounds
+
+The plot highlights the phase transition behavior as sparsity changes.
+
+---
+
+### Spatially Coupled Designs
+
+<p align="center">
+  <img src="figures/spatial_coupling.heic" width="700"/>
+</p>
+
+Spatially coupled constructions modify the geometry of the test design,
+allowing information to propagate progressively and improving algorithmic recovery.
 
 ---
 
@@ -239,10 +270,10 @@ during Winter Semester 2025/26.
 ## Seminar Report
 
 📄 **Report:**  
-`report/SargunpreetKaur_GroupTesting_Seminar.pdf`
+[Seminar Report](report/SargunpreetKaur_GroupTesting_Seminar.pdf)
 
 📊 **Presentation Slides:**  
-`slides/Seminar_GroupTesting_Presentation.pdf`
+[Presentation Slides](slides/Seminar_GroupTesting_Presentation.pdf)
 
 ---
 
@@ -262,12 +293,17 @@ during Winter Semester 2025/26.
 
 ## References
 
+## References
+
 The seminar is primarily based on modern results from:
 
-- Matthew Aldridge et al. — *Group Testing: An Information Theory Perspective*
-- Coja-Oghlan et al. — *Information-Theoretic and Algorithmic Thresholds for Group Testing*
-- Scarlett & Cevher — *Phase Transitions in Group Testing*
-- Cover & Thomas — *Elements of Information Theory*
+- [Group Testing: An Information Theory Perspective](https://www.nowpublishers.com/article/Details/CIT-111) — Matthew Aldridge, Oliver Johnson, and Jonathan Scarlett
+
+- [Information-Theoretic and Algorithmic Thresholds for Group Testing](https://ieeexplore.ieee.org/document/9186805) — Amin Coja-Oghlan, Oliver Gebhard, Max Hahn-Klimroth, and Philipp Loick
+
+- [Phase Transitions in Group Testing](https://epubs.siam.org/doi/10.1137/1.9781611974331.ch3) — Jonathan Scarlett and Volkan Cevher
+
+- [Elements of Information Theory](https://onlinelibrary.wiley.com/doi/book/10.1002/047174882X) — Thomas M. Cover and Joy A. Thomas
 
 ---
 
@@ -276,3 +312,8 @@ The seminar is primarily based on modern results from:
 **Sargunpreet Kaur**  
 M.Sc. Data Science  
 Hamburg University of Technology (TUHH)
+
+## License
+
+This project is licensed under the
+[CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/).
